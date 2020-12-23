@@ -1,0 +1,16 @@
+<p>new-master works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>Book id</th> 
+            <th>Book title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let book of books'(click)='showDetails(book)'>
+            <th>{{book.id}}</th>
+            <th>{{book.title}}</th>
+        </tr>
+    </tbody>
+</table>
+<app-book-detail [book]="selectedBook"></app-book-detail>
